@@ -11,6 +11,8 @@ const app = express();
 app.use(cors());
 app.options('*', cors());
 
+app.use(express.json({ limit: '10kb' }));
+
 if (app.get('env') === 'development') {
   app.use(morgan('dev'));
 }
