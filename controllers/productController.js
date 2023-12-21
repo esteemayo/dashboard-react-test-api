@@ -15,3 +15,9 @@ export const getProduct = (req, res, next) => {
 
   return res.status(StatusCodes.OK).json(product);
 };
+
+export const createProduct = (req, res, next) => {
+  const product = products.push({ ...req.body });
+
+  return res.status(StatusCodes.CREATED).json(product);
+};
