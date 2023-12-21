@@ -23,5 +23,6 @@ export const deleteUser = (req, res, next) => {
   const { id: userId } = req.params;
 
   users.filter((user) => user.id !== parseInt(userId));
-  res.status(StatusCodes.OK).json('User deleted!');
+
+  return res.status(StatusCodes.OK).json('User deleted!');
 };
