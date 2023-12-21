@@ -14,3 +14,10 @@ export const createUser = (req, res, next) => {
 
   return res.status(StatusCodes.CREATED).json(user);
 };
+
+export const deleteUser = (req, res, next) => {
+  const { id: userId } = req.params;
+
+  users.filter((user) => user.id !== parseInt(userId));
+  res.status(StatusCodes.OK).json('User deleted!');
+};
