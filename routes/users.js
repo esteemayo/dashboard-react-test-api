@@ -4,11 +4,12 @@ import {
   createUser,
   deleteUser,
   getUser,
+  getUsers,
 } from '../controllers/userController.js';
 
 const router = express.Router();
 
-router.route('/').post(createUser);
+router.route('/').get(getUsers).post(createUser);
 
 router.route('/:id').get(getUser).delete(deleteUser);
 
