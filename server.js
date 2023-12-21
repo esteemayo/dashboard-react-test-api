@@ -1,5 +1,3 @@
-import 'colors';
-
 import app from './app.js';
 
 app.set('port', process.env.PORT || 8800);

@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import 'colors';
 
 import userRoute from './routes/users.js';
 import productRoute from './routes/products.js';
