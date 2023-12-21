@@ -14,9 +14,9 @@ export const getUser = (req, res, next) => {
 };
 
 export const createUser = (req, res, next) => {
-  const user = users.unshift({ ...req.body });
+  users.unshift({ ...req.body });
 
-  return res.status(StatusCodes.CREATED).json(user);
+  return res.status(StatusCodes.CREATED).json(users);
 };
 
 export const deleteUser = (req, res, next) => {
