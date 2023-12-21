@@ -4,9 +4,12 @@ import compression from 'compression';
 import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
 import 'colors';
+import dotenv from 'dotenv';
 
 import userRoute from './routes/users.js';
 import productRoute from './routes/products.js';
+
+dotenv.config({ path: './config.env' });
 
 const app = express();
 
