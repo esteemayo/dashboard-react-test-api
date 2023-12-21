@@ -17,9 +17,9 @@ export const getProduct = (req, res, next) => {
 };
 
 export const createProduct = (req, res, next) => {
-  const product = products.unshift({ ...req.body });
+  products.unshift({ ...req.body });
 
-  return res.status(StatusCodes.CREATED).json(product);
+  return res.status(StatusCodes.CREATED).json(products);
 };
 
 export const deleteProduct = (req, res, next) => {
