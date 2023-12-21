@@ -17,7 +17,7 @@ export const getProduct = (req, res, next) => {
 };
 
 export const createProduct = (req, res, next) => {
-  const product = products.push({ ...req.body });
+  const product = products.unshift({ ...req.body });
 
   return res.status(StatusCodes.CREATED).json(product);
 };
