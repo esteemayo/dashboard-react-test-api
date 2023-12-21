@@ -21,3 +21,11 @@ export const createProduct = (req, res, next) => {
 
   return res.status(StatusCodes.CREATED).json(product);
 };
+
+export const deleteProduct = (req, res, next) => {
+  const { id: productId } = req.params;
+
+  products.filter((product) => product.id !== parseInt(productId));
+
+  return res.status(StatusCodes.OK).json('Product deleted!');
+};
