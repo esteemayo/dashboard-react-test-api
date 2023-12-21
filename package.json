@@ -10,8 +10,8 @@
     "debug": "ndb server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Emmanuel Adebayo",
+  "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
     "compression": "^1.7.4",
