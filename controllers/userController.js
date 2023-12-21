@@ -2,6 +2,10 @@ import { StatusCodes } from 'http-status-codes';
 
 import { users } from '../dev-data/data/users.js';
 
+export const getUsers = (req, res, next) => {
+  return res.status(StatusCodes.OK).json(users);
+};
+
 export const getUser = (req, res, next) => {
   const { id: userId } = req.params;
 
