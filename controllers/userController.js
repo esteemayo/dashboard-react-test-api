@@ -14,7 +14,7 @@ export const getUser = (req, res, next) => {
 };
 
 export const createUser = (req, res, next) => {
-  const user = users.push({ ...req.body });
+  const user = users.unshift({ ...req.body });
 
   return res.status(StatusCodes.CREATED).json(user);
 };
