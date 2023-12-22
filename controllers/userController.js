@@ -14,7 +14,7 @@ export const getUser = (req, res, next) => {
 };
 
 export const createUser = (req, res, next) => {
-  users.unshift({ ...req.body });
+  users = users.unshift({ ...req.body });
 
   return res.status(StatusCodes.CREATED).json(users);
 };
@@ -22,7 +22,7 @@ export const createUser = (req, res, next) => {
 export const deleteUser = (req, res, next) => {
   const { id: userId } = req.params;
 
-  users.filter((user) => user.id !== parseInt(userId));
+  users = users.filter((user) => user.id !== parseInt(userId));
 
   return res.status(StatusCodes.OK).json('User deleted!');
 };
