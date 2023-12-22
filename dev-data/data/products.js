@@ -1,4 +1,4 @@
-export const products = [
+export let products = [
   {
     id: 1,
     img: 'https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dw1b537bbb/images/PLAYSTATION5W/PLAYSTATION5W.png',
