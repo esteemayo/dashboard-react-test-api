@@ -22,7 +22,7 @@ export const createUser = (req, res, next) => {
 export const deleteUser = (req, res, next) => {
   const { id: userId } = req.params;
 
-  users = users.filter((user) => user.id !== parseInt(userId));
+  users.filter((user) => user.id !== parseInt(userId));
 
   return res.status(StatusCodes.OK).json('User deleted!');
 };
